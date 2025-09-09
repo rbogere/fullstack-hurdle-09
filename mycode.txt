@@ -1,0 +1,84 @@
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle
+$ git init
+Initialized empty Git repository in C:/Users/rober/Desktop/Fullstack/hurdle/.git/
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git add .
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git add .
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   style.css
+
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git commit -m
+error: switch `m' requires a value
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git commit -m "My first github push"
+[master (root-commit) 7ccd111] My first github push
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 style.css
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (master)
+$ git branch -M main
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (main)
+$ git remote add origin https://github.com/rbogere/fullstack-hurdle-09.git
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (main)
+$ git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 233 bytes | 116.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rbogere/fullstack-hurdle-09.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+rober@robert MINGW64 ~/Desktop/Fullstack/hurdle (main)
+$
