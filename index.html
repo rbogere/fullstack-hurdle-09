@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hurdle Project</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #87CEEB; /* sky blue */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    #game-container {
+      position: relative;
+      width: 600px;
+      height: 300px;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      border: 2px solid #333;
+    }
+
+    #player {
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+    }
+
+    .hurdle {
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 50px;
+      background-color: green;
+      animation: moveHurdle 2s linear infinite;
+    }
+
+    @keyframes moveHurdle {
+      0% { right: -20px; }
+      100% { right: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="game-container">
+  <div id="player"></div>
+  <div class="hurdle" style="right: 0;"></div>
+</div>
+
+<script>
+  const player = document.getElementById('player');
+  const gameContainer = document.getElementById('game-container');
+  let isJumping = false;
+
+  function jump() {
+    if (isJumping) return;
+    isJumping = true;
+    let position = 0;
+
+    // Jump up
+    let upInterval = setInterval(() => {
+      if (position >= 150) {
+        clearInterval(upInterval);
+
+        // Fall down
+        let downInterval = setInterval(() => {
+          if (position <= 0) {
+            clearInterval(downInterval);
+            isJumping = false;
+          }
+          position -= 5;
+          player.style.bottom = position + 'px';
+        }, 20);
+
+      } else {
+        position += 5;
+        player.style.bottom = position + 'px';
+      }
+    }, 20);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === "Space") {
+      jump();
+    }
+  });
+</script>
+
+</body>
+</html>
