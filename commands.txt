@@ -1,0 +1,28 @@
+PS C:\Users\rober\Desktop\commandfolder> history
+
+  Id CommandLine
+  -- -----------
+   1 cd Desktop
+   2 pwd
+   3 ls
+   4 cd ../
+   5 cd ../
+   6 ls
+   7 cd Users
+   8 ls
+   9 cd rober
+  10 cd Desktop
+  11 ls
+  12 cd .\commandfolder\
+  13 ls
+  14 history
+  15 type nul > index3.html
+  16 ls
+  17 type nul > index4.html>$null
+  18 ls
+  19 type nul > index4.html 2>$null
+  20 ls
+  21 rm index4.html
+  22 ls
+  23 type nul > index4.html 2>$null
+  24 ls
